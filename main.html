@@ -65,7 +65,7 @@
         </div>
 
         <section id="addmoney">
-          <h1>Add Money</h1>
+          <h1 class="text-3xl font-bold p-5 text-center">Add Money</h1>
           <div class="card w-full max-w-sm shrink-0 shadow-2xl mx-auto">
             <div class="card-body">
               <legend>Select a Bank</legend>
@@ -111,14 +111,16 @@
         </section>
 
         <section id="cashout">
-            <h2>Cash Out</h2>
-            <fieldset class="fieldset">
+            <h2 class="text-3xl font-bold p-5 text-center">Cash Out</h2>
+            <div class="card w-full max-w-sm shrink-0 shadow-2xl mx-auto">
+                <div class="card-body">
+                    <fieldset class="fieldset">
                 <label class="label">Amount</label>
                 <input
-                  id="amount"
+                  id="cashout-amount"
                   type="number"
                   class="input"
-                  placeholder="Enter Your Amount"
+                  placeholder="Enter Your Cash Out Amount"
                 />
                 <label class="label">Mobile Number</label>
                 <input
@@ -139,15 +141,18 @@
                 />
 
                 <div><a class="link link-hover">Forgot password?</a></div>
-                <button id="add-money" class="btn btn-neutral mt-4 bg-blue-700">
+                <button id="cashout-btn" class="btn btn-neutral mt-4 bg-blue-700">
                  Cashout
                 </button>
               </fieldset>
+                </div>
+            </div>
         </section>
       </header>
     </section>
 
     <script src="script/addMoney.js"></script>
     <script src="script/toggle.js"></script>
+    <script src="script/cashout.js"></script>
   </body>
 </html>
