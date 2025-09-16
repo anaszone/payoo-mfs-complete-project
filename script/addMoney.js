@@ -1,3 +1,9 @@
+
+document.getElementById('addmoney').style.display = 'none';
+document.getElementById('cashout').style.display = 'none';
+document.getElementById('transaction-history').style.display = 'none';
+
+
 document
   .getElementById("add-money")
   .addEventListener("click", function (event) {
@@ -9,10 +15,20 @@ document
     const mainBalance = document.getElementById("main-balance").innerText;
     const convertedMainBalance = parseFloat(mainBalance);
 
+    const container = document.getElementById('transactionHistory');
+
     if (amount && pin ) {
       if (convertedPin === 1234) {
         const sum = convertedMainBalance + convertedAmount;
         document.getElementById("main-balance").innerText = sum;
+
+
+        const p = document.createElement("p");
+        p.innerText = `
+        added ${amount};
+        `
+        container.appendChild(p);
+
       } 
       else {
            alert('You entered a wrong PIN');
